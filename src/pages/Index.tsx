@@ -1,5 +1,6 @@
 import ParticleField from "@/components/portfolio/ParticleField";
 import Navbar from "@/components/portfolio/Navbar";
+import ScrollProgress from "@/components/portfolio/ScrollProgress";
 import Hero from "@/components/portfolio/Hero";
 import About from "@/components/portfolio/About";
 import Projects from "@/components/portfolio/Projects";
@@ -12,6 +13,7 @@ const Index = () => {
   return (
     <div className="relative min-h-screen">
       <ParticleField />
+      <ScrollProgress />
       <Navbar />
       <main>
         <h1 className="sr-only">

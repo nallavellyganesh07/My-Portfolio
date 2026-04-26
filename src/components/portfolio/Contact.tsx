@@ -68,7 +68,7 @@ const Contact = () => (
           <footer className="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
             <div className="font-mono">© {new Date().getFullYear()} Nallavelly Ganesh</div>
             <div className="font-mono text-xs">
-              Designed & built with <span className="text-primary">vision</span>.
+              Crafted with <span className="text-primary">vision</span> · Built to scale.
             </div>
           </footer>
         </Reveal>
