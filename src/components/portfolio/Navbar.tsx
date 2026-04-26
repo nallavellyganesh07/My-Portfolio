@@ -27,8 +27,12 @@ const Navbar = () => {
       }`}
     >
       <nav className="container flex items-center justify-between">
-        <a href="#hero" className="font-mono text-sm tracking-wider" aria-label="Home">
-          <span className="sr-only">Home</span>
+        <a
+          href="#hero"
+          aria-label="Home"
+          className="group relative inline-flex items-center justify-center w-10 h-10 rounded-lg glass border-glow font-mono text-sm font-bold text-gradient transition-transform hover:scale-105"
+        >
+          NG
         </a>
 
         <ul className="hidden md:flex items-center gap-8">
