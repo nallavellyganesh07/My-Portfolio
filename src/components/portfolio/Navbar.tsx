@@ -27,10 +27,8 @@ const Navbar = () => {
       }`}
     >
       <nav className="container flex items-center justify-between">
-        <a href="#hero" className="font-mono text-sm tracking-wider">
-          <span className="text-primary">{"<"}</span>
-          <span className="text-foreground">NG</span>
-          <span className="text-primary">{"/>"}</span>
+        <a href="#hero" className="font-mono text-sm tracking-wider" aria-label="Home">
+          <span className="sr-only">Home</span>
         </a>
 
         <ul className="hidden md:flex items-center gap-8">

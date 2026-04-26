@@ -20,7 +20,7 @@ const links = [
 const Contact = () => (
   <section id="contact" className="relative py-24 md:py-32">
     <div className="container">
-      <SectionHeading number="06" title="Let's build something" />
+      <SectionHeading title="Let's build something" />
 
       <div className="max-w-4xl mx-auto">
         <Reveal>
@@ -33,8 +33,8 @@ const Contact = () => (
                 <span className="text-gradient">connect?</span>
               </h3>
               <p className="text-muted-foreground mb-10 max-w-xl">
-                I'm always open to collaborating on ambitious projects, exchanging notes with other
-                builders, or discussing the future of AI-powered business.
+                Open to job offers, collaborations, networking, or even just a good conversation —
+                feel free to reach out for anything.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4">

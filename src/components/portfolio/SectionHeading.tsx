@@ -1,16 +1,15 @@
 import Reveal from "./Reveal";
 
 interface Props {
-  number: string;
+  number?: string;
   title: string;
   subtitle?: string;
 }
 
-const SectionHeading = ({ number, title, subtitle }: Props) => (
+const SectionHeading = ({ title, subtitle }: Props) => (
   <Reveal>
     <div className="mb-12 md:mb-16">
       <div className="flex items-center gap-3 mb-4">
-        <span className="font-mono text-sm text-primary">{number}</span>
         <span className="h-px flex-1 max-w-[120px] bg-gradient-to-r from-primary/50 to-transparent" />
       </div>
       <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
