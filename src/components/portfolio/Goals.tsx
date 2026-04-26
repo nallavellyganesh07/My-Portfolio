@@ -13,7 +13,6 @@ const Goals = () => (
   <section id="goals" className="relative py-24 md:py-32">
     <div className="container">
       <SectionHeading
-        number="05"
         title="Future trajectory"
         subtitle="The destinations I'm building toward — publicly accountable, intentionally bold."
       />
@@ -24,7 +23,6 @@ const Goals = () => (
             <div className="group relative h-full p-6 rounded-2xl glass overflow-hidden hover:border-primary/50 transition-all hover:-translate-y-1">
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/30 transition-colors" />
               <div className="relative">
-                <div className="font-mono text-xs text-muted-foreground mb-3">0{i + 1}</div>
                 <g.icon className="w-7 h-7 text-primary mb-4 group-hover:scale-110 transition-transform" />
                 <h3 className="font-semibold text-foreground mb-2">{g.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{g.desc}</p>

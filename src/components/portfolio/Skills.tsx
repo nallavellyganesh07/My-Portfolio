@@ -33,7 +33,6 @@ const Skills = () => (
   <section id="skills" className="relative py-24 md:py-32">
     <div className="container">
       <SectionHeading
-        number="03"
         title="Skills & stack"
         subtitle="Where business intuition meets technical leverage."
       />

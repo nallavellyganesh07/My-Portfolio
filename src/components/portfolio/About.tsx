@@ -12,7 +12,7 @@ const highlights = [
 const About = () => (
   <section id="about" className="relative py-24 md:py-32">
     <div className="container">
-      <SectionHeading number="01" title="About me" />
+      <SectionHeading title="About me" />
 
       <div className="grid lg:grid-cols-5 gap-10 lg:gap-16">
         <Reveal className="lg:col-span-3 space-y-5 text-lg text-foreground/85 leading-relaxed">

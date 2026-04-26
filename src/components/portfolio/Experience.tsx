@@ -29,7 +29,6 @@ const Experience = () => (
   <section id="experience" className="relative py-24 md:py-32">
     <div className="container">
       <SectionHeading
-        number="04"
         title="Real-world experience"
         subtitle="Roles that taught me sales, systems, and how people actually behave."
       />

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Sparkles } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -15,8 +15,7 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border-glow mb-8 font-mono text-xs"
           >
-            <Sparkles className="w-3.5 h-3.5 text-primary" />
-            <span className="text-muted-foreground">Building the future, one system at a time</span>
+            <span className="text-muted-foreground">Building the future, exploring the opportunities</span>
           </motion.div>
 
           <motion.h1
