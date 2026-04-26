@@ -36,7 +36,6 @@ const Projects = () => (
   <section id="projects" className="relative py-24 md:py-32">
     <div className="container">
       <SectionHeading
-        number="02"
         title="Selected projects"
         subtitle="Bets I'm placing on AI, commerce, and the global digital economy."
       />

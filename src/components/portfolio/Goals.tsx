@@ -13,7 +13,6 @@ const Goals = () => (
   <section id="goals" className="relative py-24 md:py-32">
     <div className="container">
       <SectionHeading
-        number="05"
         title="Future trajectory"
         subtitle="The destinations I'm building toward — publicly accountable, intentionally bold."
       />
