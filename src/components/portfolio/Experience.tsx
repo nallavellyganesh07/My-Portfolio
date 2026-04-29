@@ -1,8 +1,18 @@
-import { Briefcase, Users } from "lucide-react";
+import { Briefcase, Users, Package } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
 
 const experiences = [
+  {
+    icon: Package,
+    role: "Dropshipper",
+    company: "Independent / Online",
+    points: [
+      "Built and ran a dropshipping store targeting global customers",
+      "Handled product research, supplier sourcing, and order fulfillment",
+      "Learned paid ads, conversion, and the economics of online business",
+    ],
+  },
   {
     icon: Briefcase,
     role: "Cashier",
