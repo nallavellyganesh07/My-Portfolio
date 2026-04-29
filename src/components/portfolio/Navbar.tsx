@@ -30,7 +30,7 @@ const Navbar = () => {
         <a
           href="#hero"
           aria-label="Home"
-          className="group relative inline-flex items-center justify-center w-10 h-10 rounded-lg glass border-glow font-mono text-sm font-bold text-gradient transition-transform hover:scale-105"
+          className="font-mono text-sm font-bold text-gradient transition-opacity hover:opacity-80"
         >
           NG
         </a>
