@@ -1,7 +1,20 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { ArrowDown } from "lucide-react";
 
 const Hero = () => {
+  const [showMonogram, setShowMonogram] = useState(true);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setShowMonogram(false);
+      return;
+    }
+
+    const timeout = window.setTimeout(() => setShowMonogram(false), 700);
+    return () => window.clearTimeout(timeout);
+  }, []);
+
   return (
     <section
       id="hero"
@@ -12,28 +25,62 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, delay: 1.3 }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border-glow mb-8 font-mono text-xs"
           >
             <span className="text-muted-foreground">Building the future, exploring the opportunities</span>
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 leading-[1.05]"
+            aria-label="Nallavelly Ganesh"
+            className="relative min-h-[2.1em] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 leading-[1.05]"
           >
-            <span className="block text-foreground">Nallavelly</span>
-            <span className="block text-gradient bg-[length:200%_auto] animate-gradient-shift">
-              Ganesh
-            </span>
+            <AnimatePresence mode="wait" initial={false}>
+              {showMonogram ? (
+                <motion.span
+                  key="monogram"
+                  aria-hidden="true"
+                  initial={{ opacity: 0, scale: 1.45, filter: "blur(8px)" }}
+                  animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                  exit={{ opacity: 0, scale: 0.82, filter: "blur(8px)" }}
+                  transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                  className="absolute inset-0 flex items-center justify-center text-gradient"
+                >
+                  NG
+                </motion.span>
+              ) : (
+                <motion.span
+                  key="full-name"
+                  aria-hidden="true"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="absolute inset-0 flex flex-col items-center justify-center"
+                >
+                  <motion.span
+                    initial={{ opacity: 0, scaleX: 0.72, filter: "blur(6px)" }}
+                    animate={{ opacity: 1, scaleX: 1, filter: "blur(0px)" }}
+                    transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                    className="block text-foreground"
+                  >
+                    Nallavelly
+                  </motion.span>
+                  <motion.span
+                    initial={{ opacity: 0, scaleX: 0.72, filter: "blur(6px)" }}
+                    animate={{ opacity: 1, scaleX: 1, filter: "blur(0px)" }}
+                    transition={{ duration: 0.5, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+                    className="block text-gradient bg-[length:200%_auto] animate-gradient-shift"
+                  >
+                    Ganesh
+                  </motion.span>
+                </motion.span>
+              )}
+            </AnimatePresence>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.8, delay: 1.5 }}
             className="text-base sm:text-lg md:text-xl text-muted-foreground mb-4 font-mono"
           >
             Business Analytics Student
@@ -47,7 +94,7 @@ const Hero = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.45 }}
+            transition={{ duration: 0.8, delay: 1.65 }}
             className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-12 leading-relaxed"
           >
             Building <span className="text-primary font-semibold">systems</span>, not just income.
@@ -57,7 +104,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 1.8 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <a
@@ -80,7 +127,7 @@ const Hero = () => {
           href="#about"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 1 }}
+          transition={{ delay: 2.3, duration: 1 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors"
           aria-label="Scroll to about"
         >
